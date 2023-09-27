@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h5>Add Employee
+                    <a routerLink="/home" class="btn btn-sm btn-primary float-end">Back</a>
+                </h5>
+            </div>
+            <div class="card-body">
+                <!-- create form -->
+            <form [formGroup]='employeeForm'>
+                <!-- Name -->
+                <div class="form-group mb-3">
+                    <label>Name</label>
+                    <input type="text" formControlName="name" class="form-control" placeholder="Amol Gahane">
+                    
+                </div>
+
+                  <!-- username -->
+                  <div class="form-group mb-3">
+                    <label>Username</label>
+                    <input type="text" formControlName="username" class="form-control" placeholder="amol.gahane">
+                   
+                </div>
+                <!-- Email -->
+                <div class="form-group mb-3">
+                    <label>Email</label>
+                    <input type="email" formControlName="email" class="form-control" placeholder="example@demo.com">
+                </div>
+                <!-- Address -->
+                <div class="form-group mb-3">
+                    <label>Address</label>
+                    <input type="text" formControlName="address" class="form-control" placeholder="Nagpur,MH-441122">
+                </div>
+                <!-- Phone -->
+                <div class="form-group mb-3">
+                    <label>Phone</label>
+                    <input type="text" formControlName="phone" class="form-control" placeholder="1234567890">
+                </div>
+                 <!-- Website -->
+                 <div class="form-group mb-3">
+                    <label>Website</label>
+                    <input type="text" formControlName="website" class="form-control" placeholder="smartroncode.netlify.com"> 
+                </div>
+                 <!-- Company -->
+                 <div class="form-group mb-3">
+                    <label>Company</label>
+                    <input type="text" formControlName="company" class="form-control" placeholder="Birlasoft">
+                </div>
+
+                <div  class="form-group mb-3">
+                    <button (click)="saveForm(this.employeeForm.value)" [disabled]="this.employeeForm.invalid" type="submit" class="btn btn-sm btn-danger float-start">Save</button>
+                    <button type="reset" class="btn btn-sm btn-warning float-end">Cancel</button>
+                </div>
+            </form>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

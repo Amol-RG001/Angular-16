@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "name": "Amol Gahane",
+      "username": "amol.gahane",
+      "email": "DEMO@DEMO.COM",
+      "address": "NAGPUR",
+      "phone": "34",
+      "website": "TCS.com",
+      "company": "BIRLASOFT",
+      "id": 1
+    },
+    {
+      "name": "AMOL",
+      "username": "AMOL.GAHANE",
+      "email": "DEMO@DEMO.COM",
+      "address": "NAGPUR",
+      "phone": "45",
+      "website": "TSCSS",
+      "company": "BIRLASOFT",
+      "id": 2
+    },
+    {
+      "name": "demo",
+      "username": "demo",
+      "email": "demo",
+      "address": "demo",
+      "phone": "demo",
+      "website": "demo",
+      "company": "demo",
+      "id": 4
+    }
+  ]
+}

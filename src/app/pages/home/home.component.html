@@ -1,0 +1,54 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                
+                <h5> D A S H B O R D ~ E M P L O Y E E
+                        <!-- toggle button to display table -->
+                        <label class="switch">
+                            <input (click)="displayTable()" id="toggleBtn" type="checkbox" >
+                            <span  class="slider round" ></span>
+                        </label>
+    
+                        <a routerLink="/create" class="btn btn-sm btn-success float-end">Add Employee</a>
+                    
+
+                </h5>
+               
+            </div>
+            <div *ngIf="toggleBtn" class="card-body">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Website</th>
+                            <th>Company</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of this.emplData">
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.username}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.address}}</td>
+                            <td>{{item.phone}}</td>
+                            <td>{{item.website}}</td>
+                            <td>{{item.company}}</td>
+                            <td>
+                                <a routerLink="/update/{{item.id}}" class="btn btn-sm btn-warning">Edit</a>&nbsp;
+                                <a type="button" (click)="deleteRow(item.id)" class="btn btn-sm btn-danger">Remove</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
