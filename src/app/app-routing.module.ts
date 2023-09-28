@@ -5,6 +5,12 @@ import { UpdateComponent } from './operations/update/update.component';
 import { CreateComponent } from './operations/create/create.component';
 
 const routes: Routes = [
+  {
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full',
+  },
+  
 {
  path:'home', component:HomeComponent, title:'Home page'
 },

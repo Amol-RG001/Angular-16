@@ -19,6 +19,16 @@
       "website": "demo.con",
       "company": "Demo",
       "id": 6
+    },
+    {
+      "name": "Demo",
+      "username": "demo",
+      "email": "dmeo@demo.com",
+      "address": "test",
+      "phone": "2387497028",
+      "website": "bsj",
+      "company": "sdjh",
+      "id": 7
     }
   ]
 }

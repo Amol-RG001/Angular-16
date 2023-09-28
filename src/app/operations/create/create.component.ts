@@ -39,6 +39,7 @@ export class CreateComponent implements OnInit{
 
   // saveForm - add employee
   saveForm(checkData:dataModel){
+    
     console.log(checkData);
    this.emp.saveForm(checkData).subscribe(res=>{
     this.employeeForm.reset();

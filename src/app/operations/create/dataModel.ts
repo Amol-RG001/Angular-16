@@ -4,7 +4,7 @@ export interface dataModel{
     username: string;
     email:string;
     address:string;
-    phone:string;
+    phone:number;
     website:string;
     company:string;
 }

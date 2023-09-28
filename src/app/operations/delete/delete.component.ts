@@ -13,7 +13,7 @@ export class DeleteComponent {
 
   }
 
-  deleteRow(id:any){
+  deleteRow(id:number){
     this.emp.removeEmployee(id).subscribe(res=>{
       this.get.getAllEmployee();
     })

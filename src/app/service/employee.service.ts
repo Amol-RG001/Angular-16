@@ -11,6 +11,7 @@ export class EmployeeService {
 
   //add employee
   saveForm(data:dataModel){
+    
     return this.http.post<dataModel>("http://localhost:3000/posts",data);
   }
 

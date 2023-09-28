@@ -1,7 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
 import { dataModel } from 'src/app/operations/create/dataModel';
 import { EmployeeService } from 'src/app/service/employee.service';
 
