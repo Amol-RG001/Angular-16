@@ -28,7 +28,7 @@ export class UpdateComponent implements OnInit{
 
   updateFormData(){
    this.emp.updateForm(this.empDataModel,this.empId).subscribe((res:dataModel)=>{
-    this.r.navigate(["/"]);
+    this.r.navigate(["/home"]);
    })
   }
 

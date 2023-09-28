@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { dataModel } from 'src/app/operations/create/dataModel';
 import { EmployeeService } from 'src/app/service/employee.service';
 
@@ -34,9 +35,13 @@ export class HomeComponent implements OnInit{
 
 //delete record
   deleteRow(id:any){
-this.emp.removeEmployee(id).subscribe(res=>{
-  this.getAllEmployee();
-})
+    if(confirm("Are you want to delete record no. "+ id+"?")){
+      this.emp.removeEmployee(id).subscribe(res=>{
+        this.getAllEmployee();
+      })
+    }
+
+
 
   }
 

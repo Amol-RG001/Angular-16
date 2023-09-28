@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from 'src/app/service/employee.service';
 import { dataModel } from './dataModel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -14,7 +15,7 @@ export class CreateComponent implements OnInit{
   employeeForm!:FormGroup;
   emplData:undefined|dataModel[];
 
-  constructor(private formBuilder:FormBuilder, private emp:EmployeeService){
+  constructor(private formBuilder:FormBuilder, private route:Router,  private emp:EmployeeService){
 
   }
 
@@ -41,6 +42,7 @@ export class CreateComponent implements OnInit{
     console.log(checkData);
    this.emp.saveForm(checkData).subscribe(res=>{
     this.employeeForm.reset();
+    this.route.navigate(["/home"]);
    })
   }
 
